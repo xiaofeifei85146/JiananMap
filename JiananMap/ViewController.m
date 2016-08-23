@@ -17,7 +17,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [self performSelector:@selector(gogogo) withObject:nil afterDelay:0.001];
+    
+}
+
+- (void)gogogo {
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:[MapController new]];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
